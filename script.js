@@ -180,9 +180,9 @@ function downloadRegistrationCard() {
 ABDUL WALI KHAN UNIVERSITY MARDAN (AWKUM)
 OFFICIAL E-REGISTRATION CARD & SINGLE SLIP - 7th SEMESTER
 =====================================================
-Student Name : Muhammad Abdullah
-Father Name  : Muhammad Ilyas
-Reg. No      : AWKUM-231003762
+Student Name : Mr. Shah Faisal
+Father Name  : Amir Zaman
+Reg. No      : AWKUM-231007584
 Discipline   : BSCS - Artificial Intelligence
 Semester     : 7th Semester (Section B)
 Campus       : Garden Campus
@@ -198,7 +198,7 @@ require signature.
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = url;
-    link.download = 'AWKUM_ERegistration_Single_Slip_231003762.txt';
+    link.download = 'AWKUM_ERegistration_Single_Slip_231007584.txt';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -246,7 +246,7 @@ function openResetPasswordModal() {
   const html = `
     <div>
       <p style="margin-bottom:8px;">Enter your student registration number or institutional email to reset your portal password:</p>
-      <input type="text" value="AWKUM-231003762" style="width:100%; padding:6px 8px; border:1px solid #ccc; border-radius:3px; font-size:12px; margin-bottom:10px;">
+      <input type="text" value="AWKUM-231007584" style="width:100%; padding:6px 8px; border:1px solid #ccc; border-radius:3px; font-size:12px; margin-bottom:10px;">
       <button style="background:#337ab7; color:white; border:none; padding:6px 12px; border-radius:3px; cursor:pointer;" onclick="showToast('Password OTP sent to your registered phone number.'); closeModal();">Send OTP</button>
     </div>
   `;
@@ -293,7 +293,7 @@ function showPaymentInfo(method) {
         <li>Go to <em>Bill Payment &gt; Education / University</em>.</li>
         <li>Choose <strong>Abdul Wali Khan University Mardan</strong>.</li>
         <li>Enter 16-digit voucher: <code>4177222213900604</code>.</li>
-        <li>Verify student name <strong>Muhammad Abdullah</strong> and submit.</li>
+        <li>Verify student name <strong>Mr. Shah Faisal</strong> and submit.</li>
       </ol>
     </div>
   `;
