@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initTabs();
   initDeviceSwitcher();
   initClock();
+  initProfilePhoto();
 });
 
 // 1. Sidebar Toggle Drawer
@@ -327,3 +328,57 @@ function showToast(msg) {
     toast.classList.remove('show');
   }, 2600);
 }
+
+// 10. Profile Photo Upload & LocalStorage Persistence
+function initProfilePhoto() {
+  try {
+    const savedPhoto = localStorage.getItem('awkum_student_photo');
+    if (savedPhoto) {
+      applyProfilePhoto(savedPhoto);
+    }
+  } catch (err) {
+    console.warn('LocalStorage error reading avatar', err);
+  }
+}
+
+function handlePhotoUpload(event) {
+  const file = event.target.files && event.target.files[0];
+  if (!file) return;
+
+  if (!file.type.startsWith('image/')) {
+    showToast('Please select a valid image file');
+    return;
+  }
+
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    const dataUrl = e.target.result;
+    applyProfilePhoto(dataUrl);
+    try {
+      localStorage.setItem('awkum_student_photo', dataUrl);
+    } catch (err) {
+      console.warn('LocalStorage quota exceeded or unavailable', err);
+    }
+    showToast('Profile picture uploaded successfully!');
+  };
+  reader.readAsDataURL(file);
+}
+
+function applyProfilePhoto(src) {
+  const avatarImg = document.getElementById('avatarImage');
+  const questionBox = document.getElementById('avatarQuestionBox');
+  const sidebarAvatar = document.querySelector('.sidebar-avatar');
+
+  if (avatarImg && questionBox) {
+    avatarImg.src = src;
+    avatarImg.style.display = 'block';
+    questionBox.style.display = 'none';
+  }
+  if (sidebarAvatar) {
+    sidebarAvatar.style.backgroundImage = `url('${src}')`;
+    sidebarAvatar.style.backgroundSize = 'cover';
+    sidebarAvatar.style.backgroundPosition = 'center';
+    sidebarAvatar.textContent = '';
+  }
+}
+

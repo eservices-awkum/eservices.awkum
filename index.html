@@ -383,11 +383,19 @@
       <!-- Student Profile Card (Box Primary with 3px blue top border) -->
       <div class="content-card profile-card-box">
         
-        <!-- Circular Avatar Ring with Blue Question Mark Box -->
+        <!-- Circular Avatar Ring with Photo / Question Mark Box -->
         <div class="avatar-ring-container">
-          <div class="avatar-circle-ring">
-            <div class="avatar-question-box">?</div>
+          <div class="avatar-circle-ring" id="avatarCircleRing" onclick="document.getElementById('profilePhotoInput').click()" title="Click to upload profile photo">
+            <img id="avatarImage" class="avatar-photo-img" src="student-photo.jpg" alt="Student Photo" onerror="this.style.display='none'; document.getElementById('avatarQuestionBox').style.display='flex';" onload="this.style.display='block'; document.getElementById('avatarQuestionBox').style.display='none';">
+            <div class="avatar-question-box" id="avatarQuestionBox">?</div>
+            <div class="avatar-camera-badge" title="Upload Photo">
+              <svg viewBox="0 0 24 24" width="12" height="12" fill="white">
+                <path d="M12 15.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4z"/>
+                <path d="M9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/>
+              </svg>
+            </div>
           </div>
+          <input type="file" id="profilePhotoInput" accept="image/*" style="display:none;" onchange="handlePhotoUpload(event)">
         </div>
 
         <!-- Student Header Titles -->
