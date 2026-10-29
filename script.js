@@ -39,6 +39,17 @@ function initSidebar() {
     link.addEventListener('click', () => {
       menuLinks.forEach(l => l.parentElement.classList.remove('active'));
       link.parentElement.classList.add('active');
+      const href = link.getAttribute('href');
+      if (href === '#fees') {
+        const feeTabBtn = document.querySelector('.tab-button[data-tab="tabFee"]');
+        if (feeTabBtn) feeTabBtn.click();
+      } else if (href === '#results') {
+        const resTabBtn = document.querySelector('.tab-button[data-tab="tabResult"]');
+        if (resTabBtn) resTabBtn.click();
+      } else if (href === '#courses' || href === '#dashboard') {
+        const actTabBtn = document.querySelector('.tab-button[data-tab="tabActivity"]');
+        if (actTabBtn) actTabBtn.click();
+      }
       closeSidebar();
     });
   });

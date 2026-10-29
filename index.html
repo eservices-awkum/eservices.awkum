@@ -370,11 +370,212 @@
 
         <!-- Tab 3: Fee History Pane -->
         <div class="tab-panel" id="tabFee" style="display: none;">
-          <div class="card-blue-heading">Fee Records</div>
-          <div class="tab-empty-notice" style="text-align: left;">
-            <div>• <strong>Semester 7:</strong> PKR 66,000 (Challan #4177222213900604) - Pending</div>
-            <div>• <strong>Semester 6:</strong> PKR 65,000 (Verified)</div>
-            <div>• <strong>Semester 5:</strong> PKR 62,500 (Verified)</div>
+          <div class="card-blue-heading">Fee History</div>
+
+          <div class="table-responsive-box">
+            <table class="fee-history-table">
+              <thead>
+                <tr>
+                  <th class="th-fee-num">#</th>
+                  <th class="th-fee-sem">Semester #</th>
+                  <th class="th-fee-type">Fee Type</th>
+                  <th class="th-fee-date">Fee Date</th>
+                  <th class="th-fee-amount">Amount</th>
+                  <th class="th-fee-reciept">Reciept No</th>
+                  <th class="th-fee-verify-date">Date</th>
+                  <th class="th-fee-status">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="td-fee-num">1</td>
+                  <td class="td-fee-sem">7th</td>
+                  <td class="td-fee-type">Hostel Fee</td>
+                  <td class="td-fee-date">05-10-26</td>
+                  <td class="td-fee-amount">50,000</td>
+                  <td class="td-fee-reciept">4177222213917383</td>
+                  <td class="td-fee-verify-date">Oct 23, 2026</td>
+                  <td class="td-fee-status">
+                    <span class="badge-fee-verified">
+                      <svg viewBox="0 0 24 24" width="11" height="11" fill="white" class="status-check-icon">
+                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                      </svg>
+                      Verified
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="td-fee-num">2</td>
+                  <td class="td-fee-sem">6th</td>
+                  <td class="td-fee-type">Semester Fee</td>
+                  <td class="td-fee-date">23-01-26</td>
+                  <td class="td-fee-amount">65,300</td>
+                  <td class="td-fee-reciept">4177222213907161</td>
+                  <td class="td-fee-verify-date">Feb 7, 2026</td>
+                  <td class="td-fee-status">
+                    <span class="badge-fee-verified">
+                      <svg viewBox="0 0 24 24" width="11" height="11" fill="white" class="status-check-icon">
+                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                      </svg>
+                      Verified
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="td-fee-num">3</td>
+                  <td class="td-fee-sem">5th</td>
+                  <td class="td-fee-type">Semester Fee</td>
+                  <td class="td-fee-date">02-09-25</td>
+                  <td class="td-fee-amount">65,000</td>
+                  <td class="td-fee-reciept">417722213859227</td>
+                  <td class="td-fee-verify-date">Nov 3, 2025</td>
+                  <td class="td-fee-status">
+                    <span class="badge-fee-verified">
+                      <svg viewBox="0 0 24 24" width="11" height="11" fill="white" class="status-check-icon">
+                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                      </svg>
+                      Verified
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="td-fee-num">4</td>
+                  <td class="td-fee-sem">5th</td>
+                  <td class="td-fee-type">Retotaling Fee</td>
+                  <td class="td-fee-date">04-02-26</td>
+                  <td class="td-fee-amount">500</td>
+                  <td class="td-fee-reciept">417722213919164</td>
+                  <td class="td-fee-verify-date">Feb 4, 2026</td>
+                  <td class="td-fee-status">
+                    <span class="badge-fee-verified">
+                      <svg viewBox="0 0 24 24" width="11" height="11" fill="white" class="status-check-icon">
+                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                      </svg>
+                      Verified
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="td-fee-num">5</td>
+                  <td class="td-fee-sem">5th</td>
+                  <td class="td-fee-type">Retotaling Fee</td>
+                  <td class="td-fee-date">04-02-26</td>
+                  <td class="td-fee-amount">500</td>
+                  <td class="td-fee-reciept">417722213919675</td>
+                  <td class="td-fee-verify-date">Feb 4, 2026</td>
+                  <td class="td-fee-status">
+                    <span class="badge-fee-verified">
+                      <svg viewBox="0 0 24 24" width="11" height="11" fill="white" class="status-check-icon">
+                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                      </svg>
+                      Verified
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="td-fee-num">6</td>
+                  <td class="td-fee-sem">4th</td>
+                  <td class="td-fee-type">Semester Fee</td>
+                  <td class="td-fee-date">05-02-25</td>
+                  <td class="td-fee-amount">65,000</td>
+                  <td class="td-fee-reciept">417722181913</td>
+                  <td class="td-fee-verify-date">Feb 5, 2025</td>
+                  <td class="td-fee-status">
+                    <span class="badge-fee-verified">
+                      <svg viewBox="0 0 24 24" width="11" height="11" fill="white" class="status-check-icon">
+                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                      </svg>
+                      Verified
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="td-fee-num">7</td>
+                  <td class="td-fee-sem">4th</td>
+                  <td class="td-fee-type">Retotaling Fee</td>
+                  <td class="td-fee-date">30-06-25</td>
+                  <td class="td-fee-amount">500</td>
+                  <td class="td-fee-reciept">417722213836623</td>
+                  <td class="td-fee-verify-date">Jun 30, 2025</td>
+                  <td class="td-fee-status">
+                    <span class="badge-fee-verified">
+                      <svg viewBox="0 0 24 24" width="11" height="11" fill="white" class="status-check-icon">
+                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                      </svg>
+                      Verified
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="td-fee-num">8</td>
+                  <td class="td-fee-sem">4th</td>
+                  <td class="td-fee-type">Retotaling Fee</td>
+                  <td class="td-fee-date">04-07-25</td>
+                  <td class="td-fee-amount">500</td>
+                  <td class="td-fee-reciept">417722213838290</td>
+                  <td class="td-fee-verify-date">Jul 4, 2025</td>
+                  <td class="td-fee-status">
+                    <span class="badge-fee-verified">
+                      <svg viewBox="0 0 24 24" width="11" height="11" fill="white" class="status-check-icon">
+                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                      </svg>
+                      Verified
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="td-fee-num">9</td>
+                  <td class="td-fee-sem">2nd</td>
+                  <td class="td-fee-type">Transfer From LMS</td>
+                  <td class="td-fee-date">26-02-24</td>
+                  <td class="td-fee-amount">65,000</td>
+                  <td class="td-fee-reciept">41772982280</td>
+                  <td class="td-fee-verify-date">Mar 4, 2024</td>
+                  <td class="td-fee-status">
+                    <span class="badge-fee-verified">
+                      <svg viewBox="0 0 24 24" width="11" height="11" fill="white" class="status-check-icon">
+                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                      </svg>
+                      Verified
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="td-fee-num">10</td>
+                  <td class="td-fee-sem">1st</td>
+                  <td class="td-fee-type">Semester Fee</td>
+                  <td class="td-fee-date">16-02-26</td>
+                  <td class="td-fee-amount">67,000</td>
+                  <td class="td-fee-reciept">41772919993</td>
+                  <td class="td-fee-verify-date">Oct 19, 2023</td>
+                  <td class="td-fee-status">
+                    <span class="badge-fee-verified">
+                      <svg viewBox="0 0 24 24" width="11" height="11" fill="white" class="status-check-icon">
+                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                      </svg>
+                      Verified
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="td-fee-num">11</td>
+                  <td class="td-fee-sem">Not Set</td>
+                  <td class="td-fee-type">Semester</td>
+                  <td class="td-fee-date">12-09-24</td>
+                  <td class="td-fee-amount">65,000</td>
+                  <td class="td-fee-reciept">417722062474</td>
+                  <td class="td-fee-verify-date">Sep 12, 2024</td>
+                  <td class="td-fee-status">
+                    <span class="badge-fee-verified">
+                      <svg viewBox="0 0 24 24" width="11" height="11" fill="white" class="status-check-icon">
+                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                      </svg>
+                      Verified
+                    </span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
 
